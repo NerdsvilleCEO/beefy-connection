@@ -11,6 +11,7 @@ class Person(Base):
     id = Column(Integer, primary_key=True)
     first_name = Column(String)
     last_name = Column(String)
+    fas_id = Column(String)
     email = Column(String)
     organization = Column(String)
     phone = Column(String)
@@ -24,6 +25,6 @@ class Person(Base):
     twitter = Column(String)
 
 #Use sqlite engine and create table
-engine = create_engine('sqlite:///images.db', echo=True)
+engine = create_engine('sqlite:///person.db', echo=True)
 Base.metadata.create_all(engine)
 
